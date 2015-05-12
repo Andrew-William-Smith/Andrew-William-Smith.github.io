@@ -1,0 +1,79 @@
+@media print {
+    .post a[href]:after {
+	content: " (" attr(href) ") ";
+    }
+}
+
+.key {
+    background-color: #eee;
+    font-size: 14px;
+    padding: 4px;
+    padding-bottom: 2px;
+    border-radius: 4px;
+    border: 0.5px solid #333;
+    border-bottom: 2px solid #333;
+    border-right: 2px solid #333;
+}
+
+.gui-menu {
+    background-color: #eee;
+    font-size: 14px;
+    padding: 4px;
+    padding-bottom: 2px;
+    margin-left: -1px;
+    margin-right: -1px;
+    border: 0.5px solid #333;
+    border-radius: 2px;
+}
+
+.gui-link {
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.menu-seq {
+    padding: -3px;
+    margin: 0;
+    border: 0.5px solid #333;
+    border-radius: 2px;
+}
+
+.vardef {
+    color: maroon;
+}
+
+.vardef:before {
+    color: #000;
+    content: "〈";
+    margin-left: -10px;
+}
+
+.vardef:after {
+    color: #000;
+    content: "〉";
+    margin-right: -10px;
+}
+
+.var {
+    font-family: monospace;
+}
+
+code {
+    background-color: #fff;
+    color: maroon;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+code:before {
+    color: #000;
+    content: "〔";
+    margin-left: -10px;
+}
+
+code:after {
+    color: #000;
+    content: "〕";
+    margin-right: -10px;
+}

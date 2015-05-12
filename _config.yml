@@ -1,0 +1,12 @@
+# Site settings
+title: adnotamenta miscella
+email: andy.bill.smith@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  This is Andrew Smith's personal blog.  I am a student, programmer, and conlanger, so those are pretty much the topics about which I write.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://andrew-william-smith.github.io" # the base hostname & protocol for your site
+twitter_username: opcode_f4
+github_username:  Andrew-William-Smith
+
+# Build settings
+markdown: kramdown
