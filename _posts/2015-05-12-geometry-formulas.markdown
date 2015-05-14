@@ -40,3 +40,13 @@ This is a summary of the formulas covered in my Honours Geometry class.  For eac
 **Given:** The number of sides of a regular polygon\\
 **Find:** The measure of an external angle of the polygon\\
 **Formula:** $$\tfrac{360^{\text{o}}}{n}$$, where <span class="vardef">$$n$$ = number of sides</span>.
+
+### Equation of a circle
+**Given:** The center point of a circle and either a point on the circle or the circle's radius\\
+**Find:** The equation of the circle, which can be used to find any of the variables below\\
+**Formula:** $$\left(x-h\right)^2+\left(y-k\right)^2=r^2$$, where <span class="vardef">$$\left(x, y\right)$$ is a point on the circle</span>, <span class="vardef">$$\left(h, k\right)$$ is the center of the circle</span>, and <span class="vardef">$$r$$ = radius</span>.
+
+### Pythagorean theorem
+**Given:** The lengths of two sides of a *right* triangle\\
+**Find:** The length of the third side\\
+**Formula:** $$a^2+b^2=c^2$$, where <span class="vardef">$$a$$ and $$b$$ are the lengths of the legs</span> and <span class="vardef">$$c$$ is the length of the hypotenuse</span>.
