@@ -1,12 +1,22 @@
 # Site settings
 title: adnotamenta miscella
-email: a@а.ws
+author: Andrew Smith
+email: aws@awsmith.us
 description: > # this means to ignore newlines until "baseurl:"
   This is Andrew Smith's personal blog.  I am a student, programmer, and conlanger, so those are pretty much the topics about which I write.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://а.ws" # the base hostname & protocol for your site
-twitter_username: opcode_f4
+url: "https://andrew-william-smith.github.io/" # the base hostname & protocol for your site
+twitter_username: linguafex
 github_username:  Andrew-William-Smith
 
 # Build settings
 markdown: kramdown
+kramdown:
+  auto_ids: true
+
+# Embed settings
+defaults:
+  - scope:
+      path: "assets"
+    values:
+      image: true

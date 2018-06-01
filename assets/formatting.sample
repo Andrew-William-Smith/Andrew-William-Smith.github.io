@@ -1,0 +1,40 @@
+This is a complete sample of the formatting used on this blog.
+
+# Header 1
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non nisl facilisis, dapibus lectus ac, tempus tortor. Mauris rhoncus felis ut ullamcorper maximus. Fusce tortor elit, tincidunt eget nisl quis, venenatis placerat ligula. Quisque in vulputate erat. Morbi quam ex, semper id erat id, fermentum molestie orci. Proin eu nisl a arcu aliquam aliquam et in magna. Praesent imperdiet mi nunc, at vulputate felis molestie eu. Duis neque libero, accumsan non varius porttitor, blandit vitae nisi.
+
+## Header 2
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non nisl facilisis, dapibus lectus ac, tempus tortor. Mauris rhoncus felis ut ullamcorper maximus. Fusce tortor elit, tincidunt eget nisl quis, venenatis placerat ligula. Quisque in vulputate erat. Morbi quam ex, semper id erat id, fermentum molestie orci. Proin eu nisl a arcu aliquam aliquam et in magna. Praesent imperdiet mi nunc, at vulputate felis molestie eu. Duis neque libero, accumsan non varius porttitor, blandit vitae nisi.
+
+### Header 3
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non nisl facilisis, dapibus lectus ac, tempus tortor. Mauris rhoncus felis ut ullamcorper maximus. Fusce tortor elit, tincidunt eget nisl quis, venenatis placerat ligula. Quisque in vulputate erat. Morbi quam ex, semper id erat id, fermentum molestie orci. Proin eu nisl a arcu aliquam aliquam et in magna. Praesent imperdiet mi nunc, at vulputate felis molestie eu. Duis neque libero, accumsan non varius porttitor, blandit vitae nisi.
+
+#### Header 4
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non nisl facilisis, dapibus lectus ac, tempus tortor. Mauris rhoncus felis ut ullamcorper maximus. Fusce tortor elit, tincidunt eget nisl quis, venenatis placerat ligula. Quisque in vulputate erat. Morbi quam ex, semper id erat id, fermentum molestie orci. Proin eu nisl a arcu aliquam aliquam et in magna. Praesent imperdiet mi nunc, at vulputate felis molestie eu. Duis neque libero, accumsan non varius porttitor, blandit vitae nisi.
+
+> Block quotes are set aside with a slightly different background colour, like this.
+>
+> They may contain multiple paragraphs.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non nisl facilisis, dapibus lectus ac, tempus tortor. Mauris rhoncus felis ut ullamcorper maximus. Fusce tortor elit, tincidunt eget nisl quis, venenatis placerat ligula. Quisque in vulputate erat. Morbi quam ex, semper id erat id, fermentum molestie orci. Proin eu nisl a arcu aliquam aliquam et in magna. Praesent imperdiet mi nunc, at vulputate felis molestie eu. Duis neque libero, accumsan non varius porttitor, blandit vitae nisi.
+
+definitions
+: Definitions are displayed somewhat like dictionary entries, like this.  This Markdown feature is primarily used for accessibility.
+
+> **zalam yurušnet lukalar ite inetanapiftun.**{:.fl}  
+> *zalam*{:.fl}-∅ *yuruš-ne-at lukal-ar it-e ineta-ina-pi-ip-tu-(e)n*{:.fl}  
+> tent-*erg*{:.sc} labourer-*pl-com*{:.sc} king-*dat*{:.sc} river-*loc*{:.sc} *3pl.com-3sg.an.dat-3sg.inan.loc-3sg.inan.erg*{:.sc}-build-*1sg.abs*{:.sc}
+>
+> "I, along with the labourers, build a tent for the king by the river."
+{:.aside}
+
+- Normal text.  It looks like, well text.  There's nothing special about its formatting; the text itself is what's special.  Sometimes text is **bolded** or *italicised* for emphasis.
+- Links are [formatted in red](https://www.google.com), like this.  They become lighter red when clicked.
+- Abbreviations and initialisms are indicated with dotted underlines, <abbr title="for your information">FYI</abbr>.  Hovering over one of these will display the full text.
+- Normal keybindings.  Individual keys in a keystroke are formatted to look like keys on a keyboard.  For example, pressing <span class="key">Cmd</span>+<span class="key">Shift</span>+<span class="key">P</span> will open a new Private Window in Firefox on OS X.
+- Input strings.  Special input strings, such as Emacs inputs, are formatted with the appropriate key spans, then code tags.  For example, to install the `evil-mode` package, type <span class="key">M-x</span> `package-install` <span class="key">RET</span> `evil-mode` <span class="key">RET</span>.
+- Menus.  Menus in a GUI are represented by elements that are formatted to look like the menus themselves.  For example, in Firefox, clicking <span class="menu-seq"><span class="gui-menu">Tools</span><span class="gui-link">▸</span><span class="gui-menu">Web Developer</span><span class="gui-link">▸</span><span class="gui-menu">Toggle Tools</span></span> (<span class="key">Cmd</span>+<span class="key">Alt</span>+<span class="key">I</span>) will open or close Firefox's Developer Tools, depending on whether or not they are already open.
+- `Code expressions` and simple mathematical expressions have a light red background and are typeset in a fixed-width font, as that's what most programmers (myself included) use in their editors.  Blocks of code are displayed with syntax highlighting to make them more readable.
+- Variables in code explanations are surrounded by arrow brackets.  For example, <span class="vardef"><span class="var">x</span> = angle measure</span> in the expression `sin(x)`.  This formatting also applies to maths, where <span class="vardef"><i>x</i> = angle measure</span> in the previous equation.
+
+![Testing](/assets/son.jpg){:.fullwidth}
