@@ -13,6 +13,16 @@
     }
 }
 
+::selection {
+    background: #a00000;
+    color: #fff;
+}
+
+::-moz-selection {
+    background: #a00000;
+    color: #fff;
+}
+
 h1, h2, h3, h4 {
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 600;
@@ -69,6 +79,10 @@ footer p {
 
 .footer-col-1, .footer-col-2 {
     width: calc(-15px + 27.45%);
+}
+
+.footer-col-3 {
+    text-align: justify;
 }
 
 .post-title {
