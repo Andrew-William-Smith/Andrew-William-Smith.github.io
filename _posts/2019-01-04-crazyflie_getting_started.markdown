@@ -43,7 +43,13 @@ If you are not running Windows, then you'll need to install the Crazyflie client
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 {% endhighlight %}
 
-Once the Homebrew installation completes or if you are running a **Linux** or **BSD** distribution, you may proceed.  Before running the Crazyflie client, we need to install a few prerequisite software packages.  In a terminal window, run the command below that corresponds to your system: each command should be typed on one line only, even if it is split into multiple lines below.
+Once the Homebrew installation completes, you must inform Python of where it may find packages installed via Homebrew.  So you don't have to perform this procedure every time you wish to use a Homebrew package, we shall edit your shell configuration: type `nano ~/.bashrc` (or the name of your shell dotfile) in your terminal window.  Use the arrow keys to navigate to the bottom of the file, then on a new line, add:
+
+{% highlight bash %}
+export PYTHONPATH=`brew --prefix`/lib/python3.7/site-packages:$PYTHONPATH
+{% endhighlight %}
+
+Save the file and close Nano, then restart your terminal emulator. Once you have completed the macOS installation steps or if you are running a **Linux** or **BSD** distribution, you may proceed.  Before running the Crazyflie client, we need to install a few prerequisite software packages.  In a terminal window, run the command below that corresponds to your system: each command should be typed on one line only, even if it is split into multiple lines below.
 
 - **macOS:**  
 `brew install python3 pyqt5 git sdl sdl2 sdl_image sdl_mixer sdl_ttf libusb portmidi`
