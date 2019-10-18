@@ -165,7 +165,7 @@ Looking at our [inheritance diagramme](#step-1-drawing-a-class-diagramme){:.inte
 This indicates to us that a `Split` can never be cast to `Apt`, so this code sample is **invalid**.
 
 The second example is attempting to create an object with a static type `House` and a dynamic type `Object`.
-Since `Object` is higher up in our inheritance tree than `House`, we know that an `Object` will never be able to fulfil the full contract of `House`: that is, `House` may define classes or instance variables that an instance of `Object` cannot provide.
+Since `Object` is higher up in our inheritance tree than `House`, we know that an `Object` will never be able to fulfil the full contract of `House`: that is, `House` may define methods or instance variables that an instance of `Object` cannot provide.
 Thus, the second line will also result in a compile error, making it **invalid**.
 
 ## Problem O
