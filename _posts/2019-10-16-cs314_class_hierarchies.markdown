@@ -62,18 +62,18 @@ The first step in solving any of these inheritance problems is to draw a diagram
 
 ![Class diagramme for this problem](/assets/2019-10-16/class-hierarchy.png){:.thin-center}
 
-Diagrammes like this can give us a good initial impression of the problem and are immensely helpful when it comes to determining whether an invocation is legal, there are still better techniques we can use to determine which methods are run for a given call.
-While the full version of this technique is not an effective problem-solving technique for exams since it is a somewhat lengthy process, partial applications of it can be used to ensure full correctness in your manual method resolutions.
+Diagrammes like this can give us a good initial impression of the problem and are immensely helpful when it comes to determining whether an invocation is legal; nevertheless, there are still better techniques we can use to determine which methods are run for a given call.
+While the full version of this approach is not effective for exams since it is a somewhat lengthy process, partial applications of it can be used to ensure full correctness in your manual method resolutions.
 
 ## Step 2: Fully resolving methods
-*Note:* This section describes in detail how inherited methods are resolved in Java.  If you'd rather not read through this information, feel free to skip ahead to [the actual exam problems](#solving-some-sample-problems){:.internal}.
+*Note:* This section describes in detail how inherited methods are resolved in Java.  If you'd rather not read through this information, feel free to skip ahead to [the actual sample problems](#solving-some-sample-problems){:.internal}.
 
 Using the provided code and the diagramme we constructed above, we can rewrite all methods of these classes in terms of the actual methods executed, essentially percolating higher levels of the inheritance tree down to lower levels to determine the exact method run for a given call.
 
-An important behaviour to note is that if a constructor does not ever explicitly invoke a `super()` constructor in its constructor, the zero-argument `super()` constructor of its parent will be automatically invoked.
+An important behaviour to note is that if a constructor does not ever explicitly invoke a `super()` constructor in its constructor, the zero-argument `super()` constructor of its parent will be invoked automatically.
 This behaviour continues all the way up the inheritance tree until `Object` is reached, ensuring that all of a class's instance variables will be initialised any time an instance of that class is created.
 However, any explicit call to `super()` overrides this behaviour for a given level of the hierarchy: for example, since the constructor for `Split` explicitly invokes `super(20)`, `super()` itself will not be called in that constructor.
-Nevertheless, since the resolved version of that call, `House(20)` does not invoke a superclass constructor explicitly, the zero-argument constructor `Living()` will be invoked automatically as well.
+Nevertheless, since the resolved version of that call, `House(20)`, does not invoke a superclass constructor explicitly, the zero-argument constructor `Living()` will be invoked automatically as well.
 This behaviour is often called *constructor chaining* and can be one of the more difficult parts of the Java object model to work with in an exam setting.
 
 The fully-resolved versions of all of the classes we have defined can be found below.
@@ -177,7 +177,7 @@ System.out.print(h1);
 ```
 
 This is our first program analysis problem: that is, in order to solve it fully, we have to execute some code in our heads or on paper.
-This may seem like a somewhat daunting task at first (we're not compilers after all!), the [method resolutions](#step-2-fully-resolving-methods){:.internal} we walked through earlier will be very useful to us now.
+While this may seem like a somewhat daunting task at first (we're not compilers after all!), the [method resolutions](#step-2-fully-resolving-methods){:.internal} we walked through earlier will be very useful to us now.
 We can use these traces to write out the full sequences of code that are executed for each line of the problem, showing exactly what will happen with each method call and variable access.
 We shall step through each line of code to track exactly what our object looks like after each line executes, explaining which functions are called at all steps along the way.
 
@@ -222,7 +222,7 @@ System.out.print(h1)
 At the core of this line is the requirement that we remember that `System.out.print()` implicitly calls `.toString()` on all of its arguments.
 `House` also inherits its `toString()` method from `Living`, so the method that is called here is `Living#toString()`.
 
-Now that we've traced through the whole function, we can see that the ending value of instance variable `sp` is `25`.  Since `System.out.print()` will call `Living#toString()`, an `L` will be prepended to that variable for a final result of **`L25`**.
+Now that we've traced through the whole function, we can see that the final value of instance variable `sp` is `25`.  Since `System.out.print()` will call `Living#toString()`, an `L` will be prepended to that variable for a final result of **`L25`**.
 
 ## Problem P
 > What is output by the following code?
@@ -297,6 +297,7 @@ Since the autogenerated default constructor is empty, a call to `super()`&mdash;
 
 Note also that it is important to consider both the static and dynamic types of objects we instantiate, as some (statistically, most) combinations of static and dynamic type will result in a compile error.
 In this problem, the static type `Living` is a direct ancestor of the dynamic type `Apt`, meaning that every instance of `Apt` can also be considered to be an instance of `Living` by the standard rules of polymorphism.
+As a result, this declaration is legal, meaning that we can proceed forth to the next line of code.
 
 {% highlight java %}
 g5.add(10) ~~ Living.add(s = 10) {
@@ -407,7 +408,7 @@ System.out.print(s9.equals(h9));
 This is another problem that, on the surface, looks deeply unpleasant to trace through.
 Upon deeper analysis, though, we can use some simple intuition about common Java methods to make our lives significantly easier and complete this problem in a short timeframe.
 Notice the last line: here, we compare variable `s9`, an instance of `java.lang.String`, to `h9`, an instance of `House`.
-Recalling what we know about implementations of `.equals(Object)` in Java classes, one of the first checks that is usually performed is to determine if the argument is an instance of the class of the calling object.
+Recalling what we know about implementations of `.equals(Object)` in Java classes, one of the first checks that is usually performed is to determine whether the argument is an instance of the class of the calling object.
 If this condition does not hold, then the method should return `false` by standard.
 This same rule applies to `String`s, as evidenced by the [source code](http://hg.openjdk.java.net/jdk8/jdk8/jdk/file/687fd7c7986d/src/share/classes/java/lang/String.java#l964) for the `String` class as implemented in OpenJDK.
 Thus, the result of the call to `s9.equals(h9)` is simply `false`, meaning that the output of this problem is **`false`**.
