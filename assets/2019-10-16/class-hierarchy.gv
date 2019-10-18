@@ -1,0 +1,10 @@
+digraph {
+  graph [dpi=300];
+  node [fontname="Monospace", shape=box];
+
+  Object [label="java.lang.Object"];
+  Object -> Living;
+  Living -> House;
+  House -> Split;
+  Living -> Apt;
+}

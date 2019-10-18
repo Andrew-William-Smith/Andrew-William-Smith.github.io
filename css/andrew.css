@@ -1,15 +1,36 @@
 @media print {
     .post {
-        margin: 0 10px 0 10px;
+        margin: 0;
     }
 
     .post a[href]:not(.anchorjs-link):after {
         content: " (" attr(href) ") ";
         font-family: 'IBM Plex Mono', monospace;
+        font-size: 10pt;
     }
 
     .post-content .anchorjs-link {
-        margin: 0 9px 0 -80px !important;
+        display: none;
+    }
+
+    #web-footer {
+        display: none;
+    }
+
+    #print-footer {
+        display: block !important;
+    }
+
+    .site-nav {
+        display: none;
+    }
+
+    .highlight {
+        font-size: 10pt;
+    }
+
+    pre, code {
+        font-size: inherit;
     }
 }
 
@@ -23,9 +44,14 @@
     color: #fff;
 }
 
+#print-footer {
+    display: none;
+}
+
 h1, h2, h3, h4 {
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 600;
+    text-align: left;
 }
 
 h1 { font-size: 2em; }
@@ -44,6 +70,15 @@ a:hover {
     font-family: 'Germania One', serif;
 }
 
+.post-content a.internal {
+    font-family: 'IBM Plex Serif', serif;
+}
+
+.post-content a.internal::before {
+    content: "❧ ";
+}
+
+
 .anchorjs-link {
     display: inline-block;
     width: 70px;
@@ -59,6 +94,10 @@ header {
 
 .site-title {
     font-family: 'Germania One', serif;
+}
+
+strong {
+    font-weight: 700;
 }
 
 p {
@@ -83,6 +122,14 @@ footer p {
 
 .footer-col-3 {
     text-align: justify;
+}
+
+#print-footer .footer-col-1, #print-footer .footer-col-2 {
+    width: calc(-15px + 30%);
+}
+
+#print-footer .footer-col-3 {
+    width: calc(30px + 61%);
 }
 
 .post-title {
@@ -158,10 +205,9 @@ code {
 }
 
 :not(pre) > code {
-    background-color: #fff0f0;
     color: #a00000;
     border: none;
-    padding: 2px 4px 2px 4px;
+    padding: 0;
     margin: 0;
 }
 
@@ -173,6 +219,19 @@ blockquote {
     font-size: 16px;
     letter-spacing: 0;
     border-left: 4px solid #e0e0e0;
+}
+
+blockquote .highlight {
+    color: black;
+    font-style: normal;
+    overflow-x: hidden;
+    margin-bottom: 0.5em;
+}
+
+blockquote code {
+    background-color: inherit;
+    color: inherit;
+    padding: 0px 2px 0px 2px;
 }
 
 dl, .aside {
@@ -203,6 +262,13 @@ dt {
 
 .sm-center {
     width: 70%;
+    display: inherit;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.thin-center {
+    width: 25%;
     display: inherit;
     margin-left: auto;
     margin-right: auto;
